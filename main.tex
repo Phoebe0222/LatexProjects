@@ -209,41 +209,148 @@ depending on how XYZ define claims in its policy. Since there are 2 ways in trad
 %%%%%%%%%%%%%%%
 \section{Relevant Derivatives}
 \begin{flushleft}
-This section outlines the relevant derivative products offered on the Australian Stock Exchange, including how they are quoted and priced, paying particular attention to futures and options in respect of: 
+This section outlines the relevant derivative products offered on the Australian Stock Exchange (ASX), including how they are quoted and priced, paying particular attention to futures and options in respect of: 
 \begin{itemize}
- \item Base - Quarterly
  \item Base - Monthly
+ \item Base - Quarterly
+ \item Peak - Quarterly
  \item Base - Caps
  \item Base - Strip
- \item Peak - Quarterly
 \end{itemize}
 \end{flushleft}
 
+\subsection{Australian Electricity Futures}
 \begin{flushleft}
-\begin{verbatim}
-https://www.asx.com.au/documents/products/ASX_AustralianElectricityFuturesandOptions_ContractSpecifications_July2015.pdf
-https://www.asxenergy.com.au/products/electricity_futures
-https://www.aer.gov.au/wholesale-markets/wholesale-statistics/victoria-comparative-base-futures-prices
-https://www.aemc.gov.au/energy-system/electricity/electricity-market/spot-and-contract-markets
-\end{verbatim}
-How the spot market helps keep the lights on:\par
-The Australian Energy Market Operator (AEMO) manages the electricity system so power supply and demand is matched simultaneously. The physics of the power system means the electricity supplied by generators must exactly match how much electricity is being used by consumers, or blackouts can happen. The spot market is the mechanism that AEMO uses to match the supply of electricity from power stations with real time consumption by households and businesses. All electricity in the spot market is bought and sold at the spot price. The spot price tells generators how much electricity the market needs at any moment in time to keep the physical power system in balance. When the spot price is increasing, generators  ramp up their output or more expensive generators turn on to sell extra power to the market. For example, a gas peaker or pumped hydro plant may jump in, or a fast-response battery may discharge electricity. When the spot price is decreasing, more expensive generators turn down or off.\par
-\begin{table}[!h]
-\centering
-\caption{Sample table.}
-\begin{tabular}{cccc}
-\toprule
-Value 1 & Value 2 & Value 3 & Value 4\\
-\midrule
- odd     & odd   & odd & 1.00 \\
- even    & even  & even& 1.00 \\
- odd     & odd   & odd & 1.00 \\
- even    & even  & even& 1.00 \\
-\bottomrule
-\end{tabular}
-\end{table}
-Spot prices reflect how much electricity is being used:\par
-Spot prices are currently updated every thirty minutes but this will move to every five minutes in 2021. Prices are usually low in the early hours of the morning, before people wake up and businesses and factories start operating. Spot prices are usually higher in the mid afternoon or evenings, when people and businesses are generally using the most power. There are different spot prices in each of the five NEM regions. Over the year to June 2018, spot prices averaged between \$73 (Queensland) and \$98 (South Australia) per megawatt hour (MWh), equal to 7.3c/kWh and 9.8c/kWh.
+The underlying commodity of Australian Electricity Futures is electricity energy traded in New South Wales, Victoria, South Australia and Queensland wholesale electricity pool markets conducted by the AEMO. Prices are all quoted in Australian dollar per megawatt hour and has the minimum price movement of \$0.01 per Megawatt hour. 
+\end{flushleft}
+\subsubsection{Monthly Base Load Futures}
+\begin{flushleft}
+\textbf{Contract Unit:}\par
+1 Megawatt of electrical energy per hour based on a \textbf{base} load profile, where the \textbf{base} load profile is defined as the Wholesale Electricity Pool Market \textbf{base} load period from 00:00 hours Monday to 24:00 hours Sunday over the duration of the \textbf{Contract Month}. The size and tick size of a contract month will vary depending on the number of days and \textbf{base} load hours within the month, for example, 
+\frameboxbegin{Size and tick size of a monthly base load future}
+A 28 day contract month will equate to 672 Megawatt hours (MWH) and have tick size of \$6.72:\par
+   $$ Size = 28 \ days \times 24 \ MWH = 672 \ MWH $$
+   $$ Tick\ size = 672 \ MWH \times \$0.01 = \$6.72 $$
+\frameboxend
+\textbf{Cash Settlement Price:}\par
+The Cash Settlement Price is calculated by taking the arithmetic
+average of the Wholesale Electricity Pool Market \textbf{base} load spot prices on a half hourly basis over the Contract Month, rounded
+to the nearest cent. A Provisional Cash Settlement Price will be
+declared on the first Business Day after expiry of the Contract and shall be later confirmed on the third Business Day after expiry.\par
+\textbf{Cash Settlement Value:}\par
+The Cash Settlement Value is the Cash Settlement Price multiplied by the number of Megawatt hours (MWh) in the underlying Contract
+Month.
+\end{flushleft}
+
+\subsubsection{Quarterly Base Load Futures}
+\begin{flushleft}
+\textbf{Contract Unit:}\par
+1 Megawatt of electrical energy per hour based on a \textbf{base} load profile, where the \textbf{base} load profile is defined as the Wholesale Electricity Pool Market \textbf{base} load period from 00:00 hours Monday to 24:00 hours Sunday over the duration of the \textbf{Contract Quarter}. The size and tick size of a contract quarter will vary depending on the number of days and base load hours within the quarter, for example, 
+\frameboxbegin{Size and tick size of a quarterly base load future}
+A 90 day contract month will equate to 2,160 Megawatt hours (MWH) and have tick size of \$21.60:\par
+   $$ Size = 90 \ days \times 24 \ MWH = 2,160 \ MWH $$
+   $$ Tick\ size = 2,160 \ MWH \times \$0.01 = \$21.60 $$
+\frameboxend
+\textbf{Cash Settlement Price:}\par
+The Cash Settlement Price is calculated by taking the arithmetic
+average of the Wholesale Electricity Pool Market \textbf{base} load spot prices on a half hourly basis over the Contract Quarter, rounded to the nearest cent. A Provisional Cash Settlement Price will be declared on the first Business Day after the Last Trading Day of the Contract and shall be later confirmed on the third Business Day after the Last Trading Day\par
+\textbf{Cash Settlement Value:}\par
+The Cash Settlement Value is the Cash Settlement Price multiplied by the number of Megawatt hours (MWh) in the underlying Contract
+Quarter.
+\end{flushleft}
+
+\subsubsection{Quarterly Peak Load Futures}
+\begin{flushleft}
+\textbf{Contract Unit:}\par
+1 Megawatt of electrical energy per hour based on a \textbf{peak} load profile, where the \textbf{peak} load profile is defined as the Wholesale Electricity Pool Market \textbf{peak} load period from \textbf{ 07:00am hours to
+10:00pm hours Monday to Friday (excluding Public holidays and any other days determined by ASX)} over the duration of the \textbf{Contract Quarter}. The size and tick size of a contract quarter will vary depending on the number of \textbf{peak} days and \textbf{peak} load hours within the quarter, for example, 
+\frameboxbegin{Size and tick size of a quarterly peak load future}
+A 59 day contract month will equate to 885 Megawatt hours (MWH) and have tick size of \$8.85:\par
+    $$ Size = 59 \ days \times 15 \ MWH = 885 \ MWH $$
+   $$ Tick\ size = 885 \ MWH \times \$0.01 = \$885 $$
+\frameboxend
+\textbf{Cash Settlement Price:}\par
+The Cash Settlement Price is calculated by taking the arithmetic
+average of the Wholesale Electricity Pool Market \textbf{peak} load spot prices on a half hourly basis over the Contract Quarter, rounded to the nearest cent. A Provisional Cash Settlement Price will be declared on the first Business Day after the Last Trading Day of the Contract and shall be later confirmed on the third Business Day after the Last Trading Day\par
+\textbf{Cash Settlement Value:}\par
+The Cash Settlement Value is the Cash Settlement Price multiplied by the number of Megawatt hours (MWh) in the underlying Contract
+Quarter.
+\end{flushleft}
+
+\subsubsection{Quarterly Base Load \$300 Cap Futures}
+\begin{flushleft}
+\textbf{Contract Unit:}\par
+1 Megawatt of electrical energy per hour based on a \textbf{base} load profile, where the \textbf{base} load profile is defined as the Wholesale Electricity Pool Market \textbf{base} load period from 00:00 hours Monday to 24:00 hours Sunday over the duration of the \textbf{Contract Quarter}. The size and tick size of a contract quarter will vary depending on the number of days and \textbf{base} load hours within the quarter, for example, 
+\frameboxbegin{Size and tick size of a quarterly peak load future}
+A 59 day contract month will equate to 885 Megawatt hours (MWH) and have tick size of \$8.85:\par
+   $$ Size = 90 \ days \times 24 \ MWH = 2,160 \ MWH $$
+   $$ Tick\ size = 2,160 \ MWH \times \$0.01 = \$21.60 $$
+\frameboxend
+\textbf{Cash Settlement Price:}\par
+The Cash Settlement Price = $$(C - (300 \times D)) / E,\ where:$$
+\begin{itemize}
+    \item C = the sum of all base load half hourly spot prices for the Region in the Calendar Quarter greater than \$300.00
+    \item D = the total number of base load half hour spot prices for the Region in the Calendar Quarter greater than \$300.00
+    \item E = the total number of base load half hour spot prices for the Region in the Calendar Quarter
+\end{itemize}
+A Provisional Cash Settlement Price will be declared on the first Business Day after the Last Trading Day of the Contract and shall be later confirmed on the third Business Day after the Last Trading Day\par
+\textbf{Cash Settlement Value:}\par
+The Cash Settlement Value is the Cash Settlement Price multiplied by the number of Megawatt hours (MWh) in the underlying Contract
+Quarter.
+\end{flushleft}
+
+\subsection{Australian electricity Options}
+\begin{flushleft}
+There are 3 Australian Electricity Options: calendar year base load strip options, financial year base load strip option, and average rate base load quarterly options. Prices are all quoted in Australian dollar per megawatt hour and has the minimum price movement of \$0.01 per Megawatt hour. 
+\end{flushleft}
+\subsubsection{Calendar/Financial Year Base Load Strip Options}
+\begin{flushleft}
+\textbf{Underlying Commodity:}\par
+A strip of four Quarterly Base Load Futures Contracts. An equivalent of 1 Megawatt of electrical energy per hour on a base load profile for the respective States (NSW, QLD, VIC and SA) over the duration of a Calendar/Financial Year. \par
+\textbf{Exercise Price:} \par
+Set at intervals of \$1.00 per MWh. New option exercise prices
+created as the underlying futures contract price moves.\par
+\textbf{Settlement Method:} \par
+\begin{itemize}
+    \item All in-the-money options will be automatically exercised.
+    \item Unless otherwise directed by a Deny Automatic Exercise Request, all in-the-money Options will be exercised.
+    \item Options may be exercised on any business day up to and including the day of expiry. Buyers may exercise in, at and out-of-the-money option positions held, by lodging a notice of manual exercise with ASX Clear (Futures) no later than 12:30pm on the day of expiry. 
+\end{itemize}
+\textbf{Futures Quarterly Prices:} \par
+Upon exercise, the holder will receive four quarterly futures positions at prices equivalent to the option strike price, after applying the current curve ratio determined from the previous business day’s settlement price of the four quarterly futures contracts underlying the relevant Strip Futures Product, as outline below: \par
+$$ FP = A \times B/C, \ where $$
+\begin{itemize}
+    \item FP = Price allocated to each futures contract in the strip resulting from exercised Strip Option
+    \item A = The previous day’s Daily Settlement Price for the Contract Quarter for each individual futures contract in the strip
+    \item B = Exercise Price
+    \item C = Previous Day’s Implied Strip Price, calculated as follows:
+\end{itemize}
+$$ Implied\ Strip\ Price = F/G $$
+\begin{itemize}
+    \item F = a + b + c + d
+    \begin{itemize}
+        \item a = Q1 previous day’s Daily Settlement Price x MWh for Q1
+        \item b = Q2 previous day’s Daily Settlement Price x MWh for Q2
+        \item c = Q3 previous day’s Daily Settlement Price x MWh for Q3
+        \item d = Q4 previous day’s Daily Settlement Price x MWh for Q4
+    \end{itemize}
+    \item G = Total number of MWh of all four Futures Contracts in the strip
+    \item The underlying electricity futures contract with the longest dated expiry will be further adjusted up or down in increments of \$0.01/MWh to the extent that such adjustment will achieve a more accurate implied Exercise Price, as calculated to 4 decimal places.
+\end{itemize}
+\textbf{Reference Price:} \par
+The previous day’s Daily Settlement Price of the underlying Calendar/Financial Year Base Load Strip Futures Product.
+\end{flushleft}
+
+\subsubsection{Average Rate Base Load Quarterly Options}
+\begin{flushleft}
+\textbf{Underlying Commodity:} \par
+A Quarterly Base Load Futures Contract. 1 Megawatt of electrical energy per hour on a base load profile for the respective States (NSW, QLD, VIC and SA) over the duration of a Calendar Quarter.\par
+\textbf{Exercise Price:} \par
+Set at intervals of \$1.00 per MWh. New option exercise prices created as the underlying futures contract price moves.\par
+\textbf{Settlement Method:} \par
+On the Third Business Day after the Final Trading Day all in-the money options are automatically exercised into the underlying futures contract and cash settled. Deny Automatic Exercise Requests are not permitted. Exercise Requests for out-of-the-money options and/or at-the-money options are not permitted. \par
+\textbf{Reference Price:} \par
+In accordance with the final Settlement Price of the underlying futures contract as determined on the Third Business Day after the Final Trading Day.
 \end{flushleft}
 \newpage
 %%%%%%%%%%%%%%%
@@ -251,7 +358,9 @@ Spot prices are currently updated every thirty minutes but this will move to eve
 %%%%%%%%%%%%%%%
 \section{Liabilities Management}
 \begin{flushleft}
-This section indicates how these could be used to manage XYZ’s EBI liabilities, including a simple numerical example. \par
+This section indicates how derivatives could be used to manage XYZ’s EBI liabilities, including a simple numerical example. \par
+Note that XYZ can only use derivatives to management its liabilities for claims defined base on the spike in electricity prices throughout the blackout period since claims defined in other ways are not sensitive to the movement in electricity price. \par
+
 \end{flushleft}
 
 \frameboxbegin{Example: using derivatives to manage liabilities}
